@@ -1,0 +1,23 @@
+.main__link {
+  box-sizing: border-box;
+  text-decoration: none;
+  color: black;
+  border: 5px solid;
+  width: 500px;
+  display: block;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, .2);
+  transition: background-color .2s;
+  font-size: 1.3rem;
+}
+
+.main__link:hover {
+  background-color: rgba(0, 0, 0, .1);
+}
+
+@media screen and (max-width: 600px) {
+  .main__link {
+    width: calc(300px + (500 - 300) * (100vw - 320px) / (600 - 320));
+    font-size: 1rem;
+  }
+}

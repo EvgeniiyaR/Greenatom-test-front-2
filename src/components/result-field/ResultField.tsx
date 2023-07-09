@@ -1,9 +1,11 @@
+import './ResultField.css';
 import { IItem } from '../../types/';
 
-function ResultField(props: IItem) {
+const ResultField = ({ link, element }: IItem) => {
+
   return (
     <>
-      <a href={props.link} target="_blank" rel="noreferrer">{props.element}</a>
+      <a className="main__link" href={link} target="_blank" rel="noreferrer">{element}</a>
     </>
   );
 }

@@ -1,0 +1,16 @@
+.main__input {
+  box-sizing: border-box;
+  border: 5px solid;
+  padding: 10px;
+  font-size: 1.3rem;
+}
+
+@media screen and (max-width: 600px) {
+  .main__input {
+    font-size: 1rem;
+  }
+
+  .main__input_type_input {
+    width: calc(300px + (500 - 300) * (100vw - 320px) / (600 - 320));
+  }
+}
