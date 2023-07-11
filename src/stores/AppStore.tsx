@@ -1,6 +1,6 @@
 import { ChangeEvent, FormEvent } from "react";
-import api from "../utils/api";
 import { makeAutoObservable } from "mobx";
+import api from "../utils/api";
 
 class AppStore {
   public search: string = '';
@@ -9,11 +9,11 @@ class AppStore {
   public isLoading: boolean = false;
   public isRequest: boolean = false;
   public isEmptySearch: boolean = false;
-  private root: HTMLElement;
+  private body: HTMLElement;
 
   constructor() {
     makeAutoObservable(this);
-    this.root = document.querySelector('#root') as HTMLElement;
+    this.body = document.querySelector('body') as HTMLElement;
   }
 
   generateColor = () => {
@@ -21,9 +21,8 @@ class AppStore {
   }
 
   changeColor = () => {
-    this.root.style.backgroundColor = `${this.generateColor()}`;
-    this.root.style.transition = 'background-color 1s';
-    this.root.style.overflowY = 'scroll';
+    this.body.style.backgroundColor = `${this.generateColor()}`;
+    this.body.style.transition = 'background-color 1s';
   };
 
   public handleChange = (event: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLSelectElement>) => {
