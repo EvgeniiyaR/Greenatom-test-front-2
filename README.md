@@ -25,7 +25,7 @@ Wikipedia Searcher
 Инструкция по развертыванию:
 1. Склонируйте репозиторий локально:
 
-`git clone https://evgeniiyar.github.io/Greenatom-test-front-2/`
+`git clone https://github.com/EvgeniiyaR/Greenatom-test-front-2.git`
 
 
 2. Установите Node.js с официального сайта https://nodejs.org/
